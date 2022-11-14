@@ -1,8 +1,20 @@
+"use client";
+
+import { useNavContext } from "../../context/navbar";
+
 export default function Page() {
+  const [isNavExpanded] = useNavContext();
   return (
     <>
       <div className="main-content">
-        <section className="contact section active" id="contact">
+        <section
+          className={
+            isNavExpanded
+              ? "contact section active open"
+              : "contact section active"
+          }
+          id="contact"
+        >
           <div className="container">
             <div className="row">
               <div className="section-title padd-15">

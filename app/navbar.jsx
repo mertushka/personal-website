@@ -1,25 +1,45 @@
 "use client";
 import Link from "next/link";
+("use client");
+
 import { usePathname } from "next/navigation";
+import { useNavContext } from "../context/navbar";
 
 export default function Nav() {
   const currentRoute = usePathname();
+  const [isNavExpanded, setIsNavExpanded] = useNavContext();
 
   return (
-    <div className="aside">
+    <div className={isNavExpanded ? "aside open" : "aside"}>
       <div className="logo">
-        <Link href="/">
+        <Link
+          href="/"
+          onClick={() => {
+            setIsNavExpanded(!isNavExpanded);
+          }}
+        >
           <p className="logo-text">mertushka</p>
         </Link>
       </div>
 
-      <div className="nav-toggler">
+      <div
+        className={isNavExpanded ? "nav-toggler open" : "nav-toggler"}
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}
+      >
         <span></span>
       </div>
 
-      <ul className="nav">
+      <ul className={isNavExpanded ? "nav open" : "nav"}>
         <li>
-          <Link href="/" className={currentRoute === "/" ? "active" : ""}>
+          <Link
+            href="/"
+            className={currentRoute === "/" ? "active" : ""}
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded);
+            }}
+          >
             <svg className="icon icon-home">
               <use xlinkHref="#icon-home"></use>
             </svg>
@@ -30,6 +50,9 @@ export default function Nav() {
           <Link
             href="/about"
             className={currentRoute === "/about" ? "active" : ""}
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded);
+            }}
           >
             <svg className="icon icon-user">
               <use xlinkHref="#icon-user"></use>
@@ -41,6 +64,9 @@ export default function Nav() {
           <Link
             href="/contact"
             className={currentRoute === "/contact" ? "active" : ""}
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded);
+            }}
           >
             <svg className="icon icon-bubbles2">
               <use xlinkHref="#icon-bubbles2"></use>

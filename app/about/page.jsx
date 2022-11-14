@@ -1,10 +1,19 @@
+"use client";
 import Link from "next/link";
 
+import { useNavContext } from "../../context/navbar";
+
 export default function Page() {
+  const [isNavExpanded] = useNavContext();
   return (
     <>
       <div className="main-content">
-        <section className="about section active" id="about">
+        <section
+          className={
+            isNavExpanded ? "about section active open" : "about section active"
+          }
+          id="about"
+        >
           <div className="container">
             <div className="row">
               <div className="section-title padd-15">

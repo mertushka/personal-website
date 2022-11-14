@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Navbar from "./navbar";
 import { useEffect } from "react";
 import { useLanyard } from "react-use-lanyard";
+import { NavProvider } from "../context/navbar";
 
 export default function RootLayout({ children }) {
   const { loading, status /*, websocket */ } = useLanyard({
@@ -70,8 +71,11 @@ export default function RootLayout({ children }) {
             </symbol>
           </defs>
         </svg>
-        <Navbar />
-        {children}
+
+        <NavProvider>
+          <Navbar />
+          {children}
+        </NavProvider>
       </body>
     </html>
   );
