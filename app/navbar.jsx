@@ -5,6 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useNavContext } from "../context/navbar";
 
+import { Rubik } from "@next/font/google";
+
+const rubik = Rubik({
+  weight: ["500", "700", "900"],
+  variable: "--rubik",
+  display: "swap",
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+});
+
 export default function Nav() {
   const currentRoute = usePathname();
   const [isNavExpanded, setIsNavExpanded] = useNavContext();
@@ -14,6 +23,7 @@ export default function Nav() {
       <div className="logo">
         <Link
           href="/"
+          style={rubik.style}
           onClick={() => {
             setIsNavExpanded(!isNavExpanded);
           }}

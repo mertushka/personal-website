@@ -1,7 +1,3 @@
-/* Font Awesome Icon */
-/* Google font - Montserrat */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap");
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -26,7 +22,7 @@ body {
   margin: 0;
   line-height: 1.5;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat), sans-serif;
   font-weight: 400;
 }
 * {
@@ -43,7 +39,7 @@ body {
 input,
 textarea,
 select {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat-font), sans-serif;
 }
 .section {
   background-color: #f2f2fc;
@@ -102,7 +98,7 @@ select {
 .section-title h2 {
   font-size: 40px;
   color: #302e4d;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--rubik), sans-serif;
   font-weight: 700;
   margin: 0;
   position: relative;
@@ -151,7 +147,7 @@ select {
 }
 .btn {
   font-size: 16px;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--rubik), sans-serif;
   font-weight: 500;
   padding: 12px 35px;
   color: #ffffff;
@@ -257,7 +253,7 @@ select {
 .aside .logo a {
   font-size: 40px;
   color: #302e4d;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--rubik), sans-serif;
   font-weight: 700;
   display: inline-block;
   position: relative;
@@ -399,7 +395,7 @@ select {
 .home .intro h1 {
   font-size: 30px;
   color: #302e4d;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--rubik), sans-serif;
   font-weight: 700;
   margin: 20px 0 5px;
 }

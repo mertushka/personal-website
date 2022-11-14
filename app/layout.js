@@ -1,9 +1,26 @@
 "use client";
-import "../styles/globals.css";
+import { Montserrat } from "@next/font/google";
+import { Rubik } from "@next/font/google";
 import Navbar from "./navbar";
 import { useEffect } from "react";
 import { useLanyard } from "react-use-lanyard";
 import { NavProvider } from "../context/navbar";
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  variable: "--montserrat",
+  display: "swap",
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+});
+
+const rubik = Rubik({
+  weight: ["500", "700", "900"],
+  variable: "--rubik",
+  display: "swap",
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+});
+
+import "../styles/globals.css";
 
 export default function RootLayout({ children }) {
   const { loading, status /*, websocket */ } = useLanyard({
@@ -27,17 +44,17 @@ export default function RootLayout({ children }) {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      document.body.className = "dark";
+      document.body.classList.add("dark");
       document.documentElement.style = "background-color: #151515;";
     } else {
-      document.body.className = "";
+      document.body.classList.remove("dark");
       document.documentElement.style = "background-color: #f2f2fc;";
     }
   });
   return (
     <html lang="en">
       <head />
-      <body>
+      <body className={montserrat.className}>
         <div className="preloader">
           <div className="loader"></div>
         </div>

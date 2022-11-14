@@ -2,6 +2,15 @@
 
 import { useNavContext } from "../../context/navbar";
 
+import { Rubik } from "@next/font/google";
+
+const rubik = Rubik({
+  weight: ["500", "700", "900"],
+  variable: "--rubik",
+  display: "swap",
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+});
+
 export default function Page() {
   const [isNavExpanded] = useNavContext();
   return (
@@ -18,7 +27,7 @@ export default function Page() {
           <div className="container">
             <div className="row">
               <div className="section-title padd-15">
-                <h2>Contact Me</h2>
+                <h2 style={rubik.style}>Contact Me</h2>
               </div>
             </div>
 
@@ -79,7 +88,7 @@ export default function Page() {
                 </div>
                 <div className="row">
                   <div className="col-12 padd-15">
-                    <button type="submit" className="btn">
+                    <button type="submit" style={rubik.style} className="btn">
                       Send Message
                     </button>
                   </div>

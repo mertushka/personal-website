@@ -1,6 +1,15 @@
 "use client";
 import Link from "next/link";
 
+import { Rubik } from "@next/font/google";
+
+const rubik = Rubik({
+  weight: ["500", "700", "900"],
+  variable: "--rubik",
+  display: "swap",
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+});
+
 import { useNavContext } from "../../context/navbar";
 
 export default function Page() {
@@ -17,7 +26,7 @@ export default function Page() {
           <div className="container">
             <div className="row">
               <div className="section-title padd-15">
-                <h2>About Me</h2>
+                <h2 style={rubik.style}>About Me</h2>
               </div>
             </div>
             <div className="row">
@@ -58,6 +67,7 @@ export default function Page() {
                         <Link
                           href="/contact"
                           data-section-index="1"
+                          style={rubik.style}
                           className="btn hire-me"
                         >
                           Hire Me
