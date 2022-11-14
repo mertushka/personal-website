@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     }
   });
   return (
-    <html>
+    <html lang="en">
       <head />
       <body>
         <div className="preloader">
