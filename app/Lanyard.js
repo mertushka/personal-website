@@ -12,14 +12,13 @@ const rubik = Rubik({
 });
 
 function App() {
-  const { loading, status /*, websocket */ } = useLanyard({
-    userId: "940131816692674591",
-    socket: true,
-  });
+  const status = useLanyard({
+     userId: "952574663916154960",
+   });
 
   return (
     <>
-      {!loading && (
+      {!status.isValidating && (
         <>
           <div class="intro">
             <div id="profile">
