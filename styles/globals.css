@@ -364,7 +364,8 @@ select {
 }
 .aside .copyright-text {
   font-size: 11px;
-  color: #7d7d7d;
+  font-weight: 600;
+  color: #0d090f;
 }
 
 .aside .logo .logo-text {
@@ -699,6 +700,11 @@ body.dark .home .intro h1,
 body.dark .aside .logo a,
 body.dark .aside .nav li a {
   color: #ffffff;
+}
+body.dark .aside .copyright-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fdf9ff;
 }
 body.dark .contact .contact-form .form-item .form-control,
 body.dark .contact .contact-info-item p,
