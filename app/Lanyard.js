@@ -12,14 +12,15 @@ const rubik = Rubik({
 });
 
 function App() {
-  const { loading, status /*, websocket */ } = useLanyard({
-    userId: "940131816692674591",
-    socket: true,
-  });
+  const lanyard = useLanyard({
+     userId: "940131816692674591",
+   });
+
+  const status = !lanyard.isValidating && lanyard.data.data
 
   return (
     <>
-      {!loading && (
+      {!lanyard.isValidating && (
         <>
           <div id="profile">
             <Image
