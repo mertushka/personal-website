@@ -16,6 +16,8 @@ function App() {
      userId: "940131816692674591",
    });
 
+  console.log(status);
+
   return (
     <>
       {!status.isValidating && (
