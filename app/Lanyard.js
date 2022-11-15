@@ -16,7 +16,7 @@ function App() {
      userId: "940131816692674591",
    });
 
-  const status = !lanyard.isValidating && JSON.parse(lanyard).data
+  const status = !lanyard.isValidating && lanyard.data.data
 
   return (
     <>
