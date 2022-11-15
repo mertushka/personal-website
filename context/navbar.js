@@ -4,8 +4,11 @@ const Context = createContext();
 
 export function NavProvider({ children }) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isActive, setActive] = useState("");
   return (
-    <Context.Provider value={[isNavExpanded, setIsNavExpanded]}>
+    <Context.Provider
+      value={[isNavExpanded, setIsNavExpanded, isActive, setActive]}
+    >
       {children}
     </Context.Provider>
   );

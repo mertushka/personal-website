@@ -724,6 +724,36 @@ body.dark .shadow-dark {
   box-shadow: none;
 }
 
+/* Pre-colors */
+.aside .logo a::before {
+  border-top: 4px solid #969892;
+  border-left: 4px solid #969892;
+}
+
+.aside .logo a::after {
+  border-bottom: 4px solid #969892;
+  border-right: 4px solid #969892;
+}
+
+.about .about-content .timeline .circle-dot,
+.about .about-content .timeline .timeline-item::before,
+.about .about-content .skills .skill-item .progress .progress-in,
+.btn,
+.section-title h2::before,
+.section-title h2::after,
+.aside .nav-toggler span,
+.aside .nav-toggler span::before,
+.aside .nav-toggler span::after,
+.home .intro .social-links a {
+  background-color: #969892;
+}
+
+#avatar {
+  border: 8px solid #969892;
+}
+
+
+
 /* Responive  */
 @media (max-width: 1199px) {
   .section .container {

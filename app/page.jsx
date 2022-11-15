@@ -5,13 +5,15 @@ import Lanyard from "./Lanyard";
 import { useNavContext } from "../context/navbar";
 
 export default function Page() {
-  const [isNavExpanded] = useNavContext();
+  const [isNavExpanded, setIsNavExpanded, isActive] = useNavContext();
   return (
     <>
       <div className="main-content">
         <section
           className={
-            isNavExpanded ? "home section active open" : "home section active"
+            "home section" +
+            (isNavExpanded ? " open " : "") +
+            (isActive === "home" ? " active " : "")
           }
           id="home"
         >

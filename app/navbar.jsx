@@ -16,7 +16,8 @@ const rubik = Rubik({
 
 export default function Nav() {
   const currentRoute = usePathname();
-  const [isNavExpanded, setIsNavExpanded] = useNavContext();
+  const [isNavExpanded, setIsNavExpanded, isActive, setActive] =
+    useNavContext();
 
   return (
     <div className={isNavExpanded ? "aside open" : "aside"}>
@@ -26,6 +27,7 @@ export default function Nav() {
           style={rubik.style}
           onClick={() => {
             setIsNavExpanded(!isNavExpanded);
+            setActive("home");
           }}
         >
           <p className="logo-text">mertushka</p>
@@ -48,6 +50,7 @@ export default function Nav() {
             className={currentRoute === "/" ? "active" : ""}
             onClick={() => {
               setIsNavExpanded(!isNavExpanded);
+              setActive("home");
             }}
           >
             <svg className="icon icon-home">
@@ -62,6 +65,7 @@ export default function Nav() {
             className={currentRoute === "/about" ? "active" : ""}
             onClick={() => {
               setIsNavExpanded(!isNavExpanded);
+              setActive("about");
             }}
           >
             <svg className="icon icon-user">
@@ -76,6 +80,7 @@ export default function Nav() {
             className={currentRoute === "/contact" ? "active" : ""}
             onClick={() => {
               setIsNavExpanded(!isNavExpanded);
+              setActive("contact");
             }}
           >
             <svg className="icon icon-bubbles2">

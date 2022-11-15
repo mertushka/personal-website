@@ -12,15 +12,15 @@ const rubik = Rubik({
 });
 
 export default function Page() {
-  const [isNavExpanded] = useNavContext();
+  const [isNavExpanded, setIsNavExpanded, isActive] = useNavContext();
   return (
     <>
       <div className="main-content">
         <section
           className={
-            isNavExpanded
-              ? "contact section active open"
-              : "contact section active"
+            "contact section" +
+            (isNavExpanded ? " open " : "") +
+            (isActive === "contact" ? " active " : "")
           }
           id="contact"
         >

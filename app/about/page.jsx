@@ -13,13 +13,15 @@ const rubik = Rubik({
 import { useNavContext } from "../../context/navbar";
 
 export default function Page() {
-  const [isNavExpanded] = useNavContext();
+  const [isNavExpanded, setIsNavExpanded, isActive] = useNavContext();
   return (
     <>
       <div className="main-content">
         <section
           className={
-            isNavExpanded ? "about section active open" : "about section active"
+            "about section" +
+            (isNavExpanded ? " open " : "") +
+            (isActive === "about" ? " active " : "")
           }
           id="about"
         >

@@ -13,10 +13,10 @@ const rubik = Rubik({
 
 function App() {
   const lanyard = useLanyard({
-     userId: "940131816692674591",
-   });
+    userId: "940131816692674591",
+  });
 
-  const status = !lanyard.isValidating && lanyard.data.data
+  const status = !lanyard.isValidating && lanyard.data.data;
 
   return (
     <>
@@ -57,6 +57,7 @@ function App() {
             </div>
             {status.activities?.find((a) => a.type === 0) == undefined || (
               <iframe
+                title="Discord Status"
                 id="discord-presence"
                 style={{
                   border: "none",
