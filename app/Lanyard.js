@@ -55,7 +55,7 @@ function App() {
                 </svg>
               </a>
             </div>
-            {status.activities?.find((a) => a.type === 0) == undefined || (
+            {status.activities?.filter((a) => a.type !== 4)?.length !== 0 && (
               <iframe
                 title="Discord Status"
                 id="discord-presence"
