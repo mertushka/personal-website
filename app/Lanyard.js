@@ -14,9 +14,7 @@ const rubik = Rubik({
 function App() {
   const status = useLanyard({
      userId: "940131816692674591",
-   });
-
-  console.log(status);
+   }).data.data;
 
   return (
     <>
