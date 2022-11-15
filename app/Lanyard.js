@@ -12,13 +12,15 @@ const rubik = Rubik({
 });
 
 function App() {
-  const status = useLanyard({
+  const lanyard = useLanyard({
      userId: "940131816692674591",
-   }).data.data;
+   });
+
+  const status = !lanyard.isValidating && JSON.parse(lanyard).data
 
   return (
     <>
-      {!status.isValidating && (
+      {!lanyard.isValidating && (
         <>
           <div class="intro">
             <div id="profile">
