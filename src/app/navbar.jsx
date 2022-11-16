@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-("use client");
-
 import { usePathname } from "next/navigation";
 import { useNavContext } from "../context/navbar";
 
@@ -13,6 +11,8 @@ const rubik = Rubik({
   display: "swap",
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
 });
+
+import { me } from "../data/informations";
 
 export default function Nav() {
   const currentRoute = usePathname();
@@ -30,7 +30,7 @@ export default function Nav() {
             setActive("home");
           }}
         >
-          <p className="logo-text">mertushka</p>
+          <p className="logo-text">{me.nickname}</p>
         </Link>
       </div>
 
@@ -92,7 +92,7 @@ export default function Nav() {
       </ul>
 
       <div className="copyright-text">
-        &copy; {new Date().getFullYear()} mertushka.codes
+        &copy; {new Date().getFullYear()} {me.name}
       </div>
     </div>
   );

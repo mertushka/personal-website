@@ -11,6 +11,8 @@ const rubik = Rubik({
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
 });
 
+import formURL from "../../data/contact";
+
 export default function Page() {
   const [isNavExpanded, setIsNavExpanded, isActive] = useNavContext();
   return (
@@ -33,7 +35,7 @@ export default function Page() {
 
             <div className="row">
               <form
-                action="https://formspree.io/f/mzbyjapy"
+                action={formURL}
                 className="contact-form padd-15"
                 method="POST"
               >

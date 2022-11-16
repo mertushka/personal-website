@@ -1,34 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 id="title" align="center">Personal Website</h1>
 
-## Getting Started
+<h4 align="center">This is my personal portfolio coded while learning Next.JS!</h4>
 
-First, run the development server:
+### 🔖 Table Of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- 🤔 [How To Use](#how-to-use)
+- ⚙️ [Configuration](#configuration)
+- 🚀 [Technologies](#technologies)
+- 🎊 [Features](#features)
+- 💡 [How To Contribute](#how-to-contribute)
+- 🤗 [Contributors](#contributors)
+- 👤 [Author](#author)
+- 🔏 [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h2 id="how-to-use">🤔 How To Use</h2>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 💻 Deploy with Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmertushka%2Fpersonal-website&project-name=personal-website&repository-name=personal-website&redirect-url=https%3A%2F%2Fgithub.com%2Fmertushka%2Fpersonal-website%23configuration)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+<h2 id="configuration">⚙️ Configuration</h2>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Edit files in `/src/data/` and you are done!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+<h2 id="technologies">🚀 Technologies</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Back To The Top](#title)
+
+---
+
+<h2 id="features">🎊 Features</h2>
+
+### **Real-time Discord Status**
+
+- Image, Username and Discord Rich Presence (VSCode, Spotify etc)
+
+![Discord Status](demos/discord_status.png)
+
+- Site skins
+
+![Discord Status](demos/site_theme.jpeg)
+![Discord Status](demos/discord_status_toggle.png)
+
+### **Responsive**
+
+![Responsive](demos/responsive.gif)
+
+### **Mobile Friendly**
+
+- Detecting swipe events & toggle navbar
+  ![Mobile Friendly](demos/mobile_friendly.gif)
+
+[Back To The Top](#title)
+
+---
+
+<h2 id="how-to-contribute">💡 How To Contribute</h2>
+
+- Make a fork of this repository
+- Clone to you machine and entry on respective paste
+- Create a branch with your resource: `git checkout -b my-feature`
+- Commit your changes: `git commit -m 'feat: My new feature'`
+- Push your branch: `git push origin my-feature`
+- A green button will appear at the beginning of this repository
+- Click to open and fill in the pull request information
+
+<p align="center">
+<i>Contributions, issues and features requests are welcome!</i><br />
+<i>📮 Submit PRs to help solve issues or add features</i><br />
+<i>🐛 Find and report issues</i><br />
+<i>🌟 Star the project</i><br />
+</p>
+
+[Back To The Top](#title)
+
+---
+
+<h2 id="contributors">🤗 Contributors</h2>
+
+<p>
+
+<a href="https://github.com/mertushka"><img width="60" src="https://avatars1.githubusercontent.com/u/34413473?v=4"/>
+
+</p>
+
+[Back To The Top](#title)
+
+---
+
+<h2 id="license">🔏 License</h2>
+
+Copyright © [mertushka](https://github.com/mertushka)
+
+This project is licensed by [MIT License](https://api.github.com/licenses/mit).
+
+[Back To The Top](#title)
+
+---

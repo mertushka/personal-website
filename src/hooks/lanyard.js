@@ -1,8 +1,10 @@
 import { useLanyard } from "react-use-lanyard";
 
+import id from "../data/discord";
+
 const Lanyard = () => {
   const lanyard = useLanyard({
-    userId: "940131816692674591",
+    userId: id,
   });
 
   const status = !lanyard.isValidating && lanyard.data.data;
