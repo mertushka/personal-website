@@ -39,6 +39,10 @@
 
 <h2 id="features">🎊 Features</h2>
 
+### **Incredibly Fast, Accessible, Secure, SEO Improved**
+
+[![PageSpeed Insights](/demos/pagespeed.jpeg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fmertushka.codes%2F&form_factor=desktop)
+
 ### **Real-time Discord Status**
 
 - Image, Username and Discord Rich Presence (VSCode, Spotify etc)
