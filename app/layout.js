@@ -1,9 +1,8 @@
 "use client";
 import { Montserrat } from "@next/font/google";
-import { Rubik } from "@next/font/google";
 import Navbar from "./navbar";
 import { useEffect } from "react";
-import { useLanyard } from "react-use-lanyard";
+import Lanyard from "../hooks/lanyard";
 import { NavProvider } from "../context/navbar";
 
 const montserrat = Montserrat({
@@ -13,20 +12,12 @@ const montserrat = Montserrat({
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
 });
 
-const rubik = Rubik({
-  weight: ["500", "700", "900"],
-  variable: "--rubik",
-  display: "swap",
-  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
-});
-
 import "../styles/globals.css";
 
 export default function RootLayout({ children }) {
-  const { loading, status /*, websocket */ } = useLanyard({
-    userId: "940131816692674591",
-    socket: true,
-  });
+  const [isValidating, data] = Lanyard();
+
+  const status = !isValidating && data;
 
   const statusColors = {
     online: "green",
@@ -35,7 +26,7 @@ export default function RootLayout({ children }) {
     dnd: "pink",
   };
 
-  !loading &&
+  !isValidating &&
     import(`../styles/skins/${statusColors[status.discord_status]}.css`);
   useEffect(() => {
     document.querySelector(".preloader").classList.add("opacity-0");

@@ -1,6 +1,8 @@
-import { useLanyard } from "react-use-lanyard";
+import Lanyard from "../hooks/lanyard";
 
 import Image from "next/image";
+
+import Logo from "../public/logo.png";
 
 import { Rubik } from "@next/font/google";
 
@@ -12,15 +14,41 @@ const rubik = Rubik({
 });
 
 function App() {
-  const lanyard = useLanyard({
-    userId: "940131816692674591",
-  });
+  const [isValidating, data] = Lanyard();
 
-  const status = !lanyard.isValidating && lanyard.data.data;
+  const status = !isValidating && data;
 
   return (
     <>
-      {!lanyard.isValidating && (
+      {isValidating ? (
+        <>
+          <div id="profile">
+            <Image
+              id="avatar"
+              src={Logo}
+              alt="mertushka"
+              priority={true}
+              loading="eager"
+              className="shadow-dark"
+            />
+            <h1 id="username" style={rubik.style}>
+              mert#0006
+            </h1>
+            <p>Backend Developer</p>
+            <div className="social-links">
+              <a
+                href="https://github.com/mertushka"
+                aria-label="Github Profile"
+                target="_blank"
+              >
+                <svg className="icon icon-github">
+                  <use xlinkHref="#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </>
+      ) : (
         <>
           <div id="profile">
             <Image
