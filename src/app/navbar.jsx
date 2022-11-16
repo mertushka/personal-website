@@ -92,7 +92,7 @@ export default function Nav() {
       </ul>
 
       <div className="copyright-text">
-        &copy; {new Date().getFullYear()} {me.name}
+        &copy; {new Date().getFullYear()} {me.nickname}
       </div>
     </div>
   );
