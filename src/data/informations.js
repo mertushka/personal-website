@@ -14,7 +14,7 @@ const details = [
   },
   {
     title: "Email",
-    value: "mertushka@proton.me",
+    value: "mert@mertushka.codes",
   },
   {
     title: "Freelance",
