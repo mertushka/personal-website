@@ -22,8 +22,6 @@ export default function Page() {
           <div className="container">
             <div className="intro">
               <div id="profile">
-                <Lanyard />
-
                 <div className="social-links">
                   <a
                     href={github}
@@ -36,6 +34,7 @@ export default function Page() {
                     </svg>
                   </a>
                 </div>
+                <Lanyard />
               </div>
             </div>
           </div>
