@@ -8,6 +8,8 @@ import { Rubik } from "@next/font/google";
 
 import { me } from "../data/informations";
 
+import github from "../data/github";
+
 const rubik = Rubik({
   weight: ["500", "700", "900"],
   variable: "--rubik",
@@ -36,6 +38,19 @@ function App() {
             {me.nickname}
           </h1>
           <p>{me.status}</p>
+
+          <div className="social-links">
+            <a
+              href={github}
+              aria-label="Github Profile"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg className="icon icon-github">
+                <use xlinkHref="#icon-github"></use>
+              </svg>
+            </a>
+          </div>
         </>
       ) : (
         <>
@@ -60,6 +75,19 @@ function App() {
               status.discord_user.discriminator}
           </h1>
           <p>{me.status}</p>
+
+          <div className="social-links">
+            <a
+              href={github}
+              aria-label="Github Profile"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg className="icon icon-github">
+                <use xlinkHref="#icon-github"></use>
+              </svg>
+            </a>
+          </div>
           {status.activities?.filter((a) => a.type !== 4)?.length !== 0 && (
             <iframe
               title="Discord Status"
