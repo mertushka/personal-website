@@ -13,7 +13,8 @@ const rubik = Rubik({
 import { useNavContext } from "../../context/navbar";
 
 export default function Page() {
-  const [isNavExpanded, setIsNavExpanded, isActive] = useNavContext();
+  const [isNavExpanded, setIsNavExpanded, isActive, setActive] =
+    useNavContext();
   return (
     <>
       <div className="main-content">
@@ -71,6 +72,9 @@ export default function Page() {
                           data-section-index="1"
                           style={rubik.style}
                           className="btn hire-me"
+                          onClick={() => {
+                            setActive("contact");
+                          }}
                         >
                           Hire Me
                         </Link>

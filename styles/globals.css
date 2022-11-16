@@ -287,13 +287,12 @@ select {
   border-radius: 5px;
   z-index: 11;
   background-color: #fdf9ff;
-  /* display: -ms-flexbox;
-    display: flex; */
   display: none;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3 s ease;
 }
@@ -763,21 +762,33 @@ body.dark .shadow-dark {
     display: -ms-flexbox;
     display: flex;
     left: 30px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .aside .nav-toggler.open {
     left: 300px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .aside {
     left: -270px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .aside.open {
     left: 0;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .section {
     left: 0;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .section.open {
     left: 270px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
   .about .about-content .personal-info .info-item p span {
     display: block;
