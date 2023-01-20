@@ -7,7 +7,7 @@ const Lanyard = () => {
     userId: id,
   });
 
-  const status = !lanyard.isValidating && lanyard.data.data;
+  const status = !lanyard.isValidating && lanyard?.data?.data;
 
   const isValidating = lanyard.isValidating;
   const data = status;

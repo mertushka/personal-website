@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
   };
 
   !isValidating &&
+    status &&
     import(`../styles/skins/${statusColors[status.discord_status]}.css`);
   useEffect(() => {
     document.querySelector(".preloader").classList.add("opacity-0");

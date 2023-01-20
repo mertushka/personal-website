@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      {isValidating ? (
+      {isValidating || !status ? (
         <>
           <Image
             id="avatar"
