@@ -4,17 +4,17 @@ const me = {
   bio: "I started programming at a young age and I am improving myself every day.",
   status: "Backend Developer",
   keywords:
-    "mertushka, mert, portfolio, mertushka.codes, mertushka portfolio, mertushka website, mert website, mert portfolio",
+    "mertushka, mert, portfolio, mertushka.tech, mertushka portfolio, mertushka website, mert website, mert portfolio",
 };
 
 const details = [
   {
     title: "Website",
-    value: "www.mertushka.codes",
+    value: "www.mertushka.tech",
   },
   {
     title: "Email",
-    value: "mert@mertushka.codes",
+    value: "me@mertushka.tech",
   },
   {
     title: "Freelance",
