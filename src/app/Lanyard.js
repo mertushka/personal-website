@@ -9,6 +9,7 @@ import { Rubik } from "@next/font/google";
 import { me } from "../data/informations";
 
 import github from "../data/github";
+import settings from "../data/discord";
 
 const rubik = Rubik({
   weight: ["500", "700", "900"],
@@ -20,7 +21,7 @@ const rubik = Rubik({
 function App() {
   const [isValidating, data] = Lanyard();
 
-  const status = !isValidating && data;
+  const status = settings.showPresence && !isValidating && data;
 
   return (
     <>

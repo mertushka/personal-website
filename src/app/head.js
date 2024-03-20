@@ -1,9 +1,11 @@
 import { me } from "../data/informations";
+import Head from "next/head";
 
-export default function Head() {
+export default function HHead() {
   return (
-    <>
+    <Head>
       <title>{me.nickname}</title>
+
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta
@@ -69,6 +71,6 @@ export default function Head() {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
-    </>
+    </Head>
   );
 }

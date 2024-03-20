@@ -1,11 +1,13 @@
 import { useLanyard } from "react-use-lanyard";
 
-import id from "../data/discord";
+import settings from "../data/discord";
 
 const Lanyard = () => {
   const lanyard = useLanyard({
-    userId: id,
+    userId: settings.discordID,
   });
+
+  if (!settings.showPresence) return [false, false];
 
   const status = !lanyard.isValidating && lanyard?.data?.data;
 
