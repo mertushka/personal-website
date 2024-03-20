@@ -7,7 +7,7 @@ const rubik = Rubik({
   weight: ["500", "700", "900"],
   variable: "--rubik",
   display: "swap",
-  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
 });
 
 import { useNavContext } from "../../context/navbar";

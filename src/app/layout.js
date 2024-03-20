@@ -9,7 +9,7 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
   variable: "--montserrat",
   display: "swap",
-  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
 });
 
 import "../styles/globals.css";
