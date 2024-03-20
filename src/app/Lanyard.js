@@ -98,7 +98,7 @@ function App() {
                 borderRadius: "10px",
                 margin: "10px",
               }}
-              src={`https://lanyard.mertushka.tech/user/${status.discord_user.id}?background=false&title=false&mode=iframe`}
+              src={`https://lanyard.mertushka.pw/user/${status.discord_user.id}?background=false&title=false&mode=iframe`}
               width="50%"
               height="144px"
             ></iframe>

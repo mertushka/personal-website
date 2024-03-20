@@ -1,10 +1,10 @@
 const skills = [
   {
-    title: "Javascript",
+    title: "Node.JS",
     value: "100%",
   },
   {
-    title: "HTML & CSS",
+    title: "HTML & CSS & JavaScript",
     value: "90%",
   },
   {
@@ -12,11 +12,19 @@ const skills = [
     value: "90%",
   },
   {
-    title: "Java",
+    title: "Python",
     value: "50%",
   },
   {
-    title: "Python",
+    title: "Rust",
+    value: "50%",
+  },
+  {
+    title: "Java",
+    value: "40%",
+  },
+  {
+    title: "Flutter",
     value: "30%",
   },
 ];
