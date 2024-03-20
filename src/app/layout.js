@@ -1,9 +1,13 @@
 "use client";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import Navbar from "./navbar";
 import { useEffect } from "react";
 import Lanyard from "../hooks/lanyard";
 import { NavProvider } from "../context/navbar";
+
+import Head from "./head";
+
+import settings from "../data/discord";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
@@ -15,20 +19,23 @@ const montserrat = Montserrat({
 import "../styles/globals.css";
 
 export default function RootLayout({ children }) {
-  const [isValidating, data] = Lanyard();
+  if (settings.showPresence) {
+    const [isValidating, data] = Lanyard();
 
-  const status = !isValidating && data;
+    const status = !isValidating && data;
 
-  const statusColors = {
-    online: "green",
-    offline: "gray",
-    idle: "yellow",
-    dnd: "pink",
-  };
+    const statusColors = {
+      online: "green",
+      offline: "gray",
+      idle: "yellow",
+      dnd: "pink",
+    };
 
-  !isValidating &&
-    status &&
-    import(`../styles/skins/${statusColors[status.discord_status]}.css`);
+    !isValidating &&
+      status &&
+      import(`../styles/skins/${statusColors[status.discord_status]}.css`);
+  }
+
   useEffect(() => {
     document.querySelector(".preloader").classList.add("opacity-0");
     document.querySelector(".preloader").style.display = "none";
@@ -45,7 +52,7 @@ export default function RootLayout({ children }) {
   });
   return (
     <html lang="en">
-      <head />
+      <Head />
       <body className={montserrat.className}>
         <div className="preloader">
           <div className="loader"></div>

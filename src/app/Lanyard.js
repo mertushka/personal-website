@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Logo from "../../public/logo.png";
 
-import { Rubik } from "@next/font/google";
+import { Rubik } from "next/font/google";
 
 import { me } from "../data/informations";
 

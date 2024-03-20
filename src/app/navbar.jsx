@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useNavContext } from "../context/navbar";
 
-import { Rubik } from "@next/font/google";
+import { Rubik } from "next/font/google";
 
 const rubik = Rubik({
   weight: ["500", "700", "900"],
