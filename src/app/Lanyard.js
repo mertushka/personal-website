@@ -2,7 +2,7 @@ import Lanyard from "../hooks/lanyard";
 
 import Image from "next/image";
 
-import Logo from "../../public/logo.png";
+import Logo from "../../public/logo.webp";
 
 import { Rubik } from "next/font/google";
 
@@ -32,7 +32,6 @@ function App() {
             src={Logo}
             alt={me.nickname}
             priority={true}
-            loading="eager"
             className="shadow-dark"
           />
           <h1 id="username" style={rubik.style}>
@@ -67,7 +66,6 @@ function App() {
             height={128}
             alt={me.nickname}
             priority={true}
-            loading="eager"
             className="shadow-dark"
           />
           <h1 id="username" style={rubik.style}>
