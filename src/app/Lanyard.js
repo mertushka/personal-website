@@ -1,13 +1,10 @@
 import Lanyard from "../hooks/lanyard";
-
+import IframeResizer from "@iframe-resizer/react";
 import Image from "next/image";
-
 import Logo from "../../public/logo.webp";
-
 import { Rubik } from "next/font/google";
 
 import { me } from "../data/informations";
-
 import github from "../data/github";
 import settings from "../data/discord";
 
@@ -21,7 +18,7 @@ const rubik = Rubik({
 function App() {
   const [isValidating, data] = Lanyard();
 
-  const status = settings.showPresence && !isValidating && data;
+  const status = settings.lanyard.enabled && !isValidating && data;
 
   return (
     <>
@@ -57,10 +54,12 @@ function App() {
           <Image
             id="avatar"
             src={
-              "https://cdn.discordapp.com/avatars/" +
-              status.discord_user.id +
-              "/" +
-              status.discord_user.avatar
+              settings.lanyard.useDiscordAvatar
+                ? "https://cdn.discordapp.com/avatars/" +
+                  status.discord_user.id +
+                  "/" +
+                  status.discord_user.avatar
+                : Logo
             }
             width={128}
             height={128}
@@ -69,9 +68,9 @@ function App() {
             className="shadow-dark"
           />
           <h1 id="username" style={rubik.style}>
-            {status.discord_user.username +
-              "#" +
-              status.discord_user.discriminator}
+            {settings.lanyard.useDiscordUsername
+              ? status.discord_user.username
+              : me.nickname}
           </h1>
           <p>{me.status}</p>
 
@@ -87,21 +86,24 @@ function App() {
               </svg>
             </a>
           </div>
-          {status.activities?.filter((a) => a.type !== 4)?.length !== 0 && (
-            <iframe
-              title="Discord Status"
-              id="discord-presence"
-              style={{
-                border: "none",
-                overflow: "hidden",
-                borderRadius: "10px",
-                margin: "10px",
-              }}
-              src={`https://lanyard.mertushka.pw/user/${status.discord_user.id}?background=false&title=false&mode=iframe`}
-              width="50%"
-              height="144px"
-            ></iframe>
-          )}
+          {settings.lanyard.showPresence &&
+            status.activities?.filter((a) => a.type !== 4)?.length !== 0 && (
+              <IframeResizer
+                title="Discord Status"
+                id="discord-presence"
+                style={{
+                  height: "192px",
+                  width: "50%",
+                  border: "none",
+                  overflow: "hidden",
+                  borderRadius: "10px",
+                  margin: "10px",
+                }}
+                src={`https://lanyard.mertushka.pw/user/${status.discord_user.id}?background=false&title=false&mode=iframe`}
+                frameborder="0"
+                scrolling="no"
+              />
+            )}
         </>
       )}
     </>

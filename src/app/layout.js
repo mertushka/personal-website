@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 import "../styles/globals.css";
 
 export default function RootLayout({ children }) {
-  if (settings.showPresence) {
+  if (settings.lanyard.syncSiteSkin) {
     const [isValidating, data] = Lanyard();
 
     const status = !isValidating && data;

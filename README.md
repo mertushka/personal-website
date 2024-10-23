@@ -1,6 +1,6 @@
 <h1 id="title" align="center">Personal Website</h1>
 
-<h4 align="center">This is my personal portfolio coded while learning Next.JS!</h4>
+<h4 align="center">This is my personal portfolio, coded while learning Next.JS!</h4>
 
 ### 🔖 Table Of Contents
 
@@ -25,7 +25,7 @@
 
 <h2 id="configuration">⚙️ Configuration</h2>
 
-- Edit files in `/src/data/` and you are done!
+- Edit configuration files in `/src/data/` and you are done!
 
 ---
 
@@ -41,7 +41,7 @@
 
 ### **Incredibly Fast, Accessible, Secure, SEO Improved**
 
-[![PageSpeed Insights](/demos/pagespeed.jpeg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fmertushka.pw%2F&form_factor=desktop)
+[![PageSpeed Insights](/demos/pagespeed.png)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fmertushka.pw%2F&form_factor=desktop)
 
 ### **Real-time Discord Status**
 
@@ -49,9 +49,9 @@
 
 ![Discord Status](demos/discord_status.png)
 
-- Site skins
+- Site skins (Default: Invisible)
 
-![Discord Status](demos/site_theme.jpeg)
+![Discord Status](demos/site_skins.jpeg)
 ![Discord Status](demos/discord_status_toggle.png)
 
 ### **Responsive**
@@ -61,7 +61,8 @@
 ### **Mobile Friendly**
 
 - Detecting swipe events & toggle navbar
-  ![Mobile Friendly](demos/mobile_friendly.gif)
+
+![Mobile Friendly](demos/mobile_friendly.gif)
 
 [Back To The Top](#title)
 
